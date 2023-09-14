@@ -1,7 +1,8 @@
 $bgColor: #f8f8f8;
 $text: #1b1c21;
-$accentColor: #ff3e79;
-$disabledTextColor: #7e7e82;
+$accentColor: #41f6d7;
+$primaryColor: #ff3e79;
+$activeTextColor: #7e7e82;
 
 @import '~normalize.css';
 @import url(./fonts.scss);
@@ -34,26 +35,45 @@ h3 {
   font-weight: 400;
 }
 
-.search,
 .quick-access-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: $accentColor;
+  background-color: $primaryColor;
+
+  &:hover > img {
+    animation: 0.5s forwards linear shaky;
+  }
+}
+
+@keyframes shaky {
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .nav-menu {
   position: fixed;
-  padding: 30px 30px 5px 20px;
+  padding: 30px 30px 5px 24px;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   width: 305px;
-  height: calc(100% - 35px);
+  height: 100%;
   background-color: #fff;
 }
 
@@ -71,13 +91,31 @@ h3 {
   font-size: 1em;
   line-height: 150%;
   letter-spacing: -0.2px;
+
+  & > a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    font-weight: 500;
+  }
+
+  &.active > a {
+    color: $activeTextColor;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 135%;
+      width: 4px;
+      left: -20px;
+      top: -5px;
+      background-color: $accentColor;
+      border-radius: 2px;
+    }
+  }
 }
 
-.nav-menu__list-item > a {
-  text-decoration: none;
-  cursor: pointer;
-  color: inherit;
-}
 .nav-menu__list-item + .nav-menu__list-item {
   padding-top: 28px;
 }
@@ -85,22 +123,23 @@ h3 {
   display: block;
   text-decoration: none;
   color: inherit;
-}
 
-.contacts > a:last-child {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-top: 13px;
+  &:last-child {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 13px;
+  }
 }
 
 .nav-menu__footer {
   display: flex;
   flex-direction: column;
-  justify-content: end;
   gap: 40px;
+  margin-top: auto;
+  padding-bottom: 5px;
 }
 
-.quick-access {
+.contact-quick-access {
   display: flex;
   gap: 16px;
 }
@@ -113,6 +152,7 @@ h3 {
 
 .language-list > li {
   display: inline-block;
+  cursor: pointer;
   text-transform: uppercase;
   padding-right: 7px;
   font-weight: 500;
@@ -120,5 +160,15 @@ h3 {
 
 .language-list > li.active {
   font-weight: 400;
-  color: $disabledTextColor;
+  color: $activeTextColor;
+}
+
+// Main
+
+.content {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: calc(100vw - 305px);
+  margin-left: auto;
+  background-color: $bgColor;
 }
