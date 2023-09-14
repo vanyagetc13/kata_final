@@ -1,17 +1,124 @@
-$bgColor: #24292e;
-$text: #fff;
+$bgColor: #f8f8f8;
+$text: #1b1c21;
+$accentColor: #ff3e79;
+$disabledTextColor: #7e7e82;
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+@import '~normalize.css';
+@import url(./fonts.scss);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
+  font-family: 'TT Lakes', sans-serif;
   background-color: $bgColor;
   color: $text;
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-size: 16px;
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.search,
+.quick-access-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $accentColor;
+}
+
+.nav-menu {
+  position: fixed;
+  padding: 30px 30px 5px 20px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 305px;
+  height: calc(100% - 35px);
+  background-color: #fff;
+}
+
+.nav-menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu__list {
+  margin-top: 40px;
+}
+
+.nav-menu__list-item {
+  font-size: 1em;
+  line-height: 150%;
+  letter-spacing: -0.2px;
+}
+
+.nav-menu__list-item > a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+.nav-menu__list-item + .nav-menu__list-item {
+  padding-top: 28px;
+}
+.contacts > a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contacts > a:last-child {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 13px;
+}
+
+.nav-menu__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 40px;
+}
+
+.quick-access {
+  display: flex;
+  gap: 16px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.language-list > li {
+  display: inline-block;
+  text-transform: uppercase;
+  padding-right: 7px;
+  font-weight: 500;
+}
+
+.language-list > li.active {
+  font-weight: 400;
+  color: $disabledTextColor;
 }
