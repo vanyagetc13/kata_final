@@ -217,26 +217,24 @@ h3 {
 .content__nav-menu {
   margin-top: 25px;
   display: flex;
-  // row-gap: 20px;
-  gap: 20px 40px;
+  gap: 20px 5px;
   flex-wrap: wrap;
-
+  letter-spacing: -0.2px;
   & > .nav-menu-btn {
+    font-size: 1em;
+    line-height: 1.5;
     color: $activeTextColor;
     font-weight: 500;
     border: none;
     outline: none;
     cursor: pointer;
     background-color: transparent;
-    // &:not(:first-child) {
-    //   margin-left: 22px;
-    // }
-
+    padding: 8px 22px;
     &.active {
       background-color: #fff;
       border-radius: 6px;
       border: 2px solid #b8ffec;
-      padding: 8px 22px;
+      padding: 6px 20px;
     }
   }
 }
