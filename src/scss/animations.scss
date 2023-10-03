@@ -1,0 +1,29 @@
+@keyframes shaky {
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shaky180rotated {
+  25% {
+    transform: rotate(210deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(210deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
