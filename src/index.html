@@ -41,31 +41,37 @@
 		</form>
 	</div>
 	<!-- modals end -->
-	<nav class='nav-menu'>
+	<!-- Nav-menu -->
+	<nav class='nav-menu' id='nav-menu'>
 		<header class="nav-menu__header">
-			<a href="/"><img src="./img/logo.svg" alt="logo" width='95px'></a>
+			<button class='burger-menu-btn' id='burger-btn'>
+				<span></span>
+			</button>
+			<a href="/" class='logo'><img src="./img/logo.svg" alt="logo" width='95px'></a>
 			<h1 style='display: none;'>CPS website</h1>
-			<div class='quick-access-icon'>
+			<div class='quick-access-icon search__wrapper'>
 				<img src="./img/icons/search.svg" alt="search" width='17px' style='margin-top: 2px;'>
 			</div>
 		</header>
-		<ul class='nav-menu__list'>
-			<li class="nav-menu__list-item"><a href="#">Ремонт техники</a></li>
-			<li class="nav-menu__list-item active"><a href="#">Услуги и сервисы</a></li>
-			<li class="nav-menu__list-item"><a href="#">Корпоративным клиентам</a></li>
-			<li class="nav-menu__list-item"><a href='#'>Продавцам техники</a></li>
-			<li class="nav-menu__list-item"><a href='#'>Партнерам</a></li>
-			<li class="nav-menu__list-item"><a href='#'>Производителям</a></li>
-			<li class="nav-menu__list-item"><a href='#'>Наши сервисные центры</a></li>
-			<li class="nav-menu__list-item"><a href='#'>Контакты</a></li>
-		</ul>
+		<div class='nav-menu__list__wrapper'>
+			<ul class='nav-menu__list'>
+				<li class="nav-menu__list-item"><a href="#">Ремонт техники</a></li>
+				<li class="nav-menu__list-item active"><a href="#">Услуги и сервисы</a></li>
+				<li class="nav-menu__list-item"><a href="#">Корпоративным клиентам</a></li>
+				<li class="nav-menu__list-item"><a href='#'>Продавцам техники</a></li>
+				<li class="nav-menu__list-item"><a href='#'>Партнерам</a></li>
+				<li class="nav-menu__list-item"><a href='#'>Производителям</a></li>
+				<li class="nav-menu__list-item"><a href='#'>Наши сервисные центры</a></li>
+				<li class="nav-menu__list-item"><a href='#'>Контакты</a></li>
+			</ul>
+		</div>
 		<footer class="nav-menu__footer">
 			<div class='contact-container'>
 				<div class='contact-quick-access'>
-					<div class='quick-access-icon' id='call-btn'>
+					<div class='quick-access-icon call-btn'>
 						<img src="./img/icons/phone.svg" alt="phone">
 					</div>
-					<div class='quick-access-icon'>
+					<div class='quick-access-icon feedback-btn'>
 						<img src="./img/icons/chat.svg" alt="chat">
 					</div>
 					<div class='quick-access-icon'>
@@ -85,167 +91,192 @@
 				</ul>
 			</div>
 		</footer>
+		<div class='mobile__contact-quick-acess contact-quick-access'>
+			<div class='quick-access-icon call-btn'>
+				<img src="./img/icons/phone.svg" alt="phone">
+			</div>
+			<div class='quick-access-icon feedback-btn'>
+				<img src="./img/icons/chat.svg" alt="chat">
+			</div>
+			<div class='quick-access-icon'>
+				<img src="./img/icons/profile.svg" alt="profile">
+			</div>
+		</div>
 	</nav>
 	<main class='content'>
 		<header class="content__header">
 			<h2 class='content__header__title'>Услуги и сервисы</h2>
 			<ul class='content__header__buttons'>
 				<li class="content__header__button">
-					<a href="#" id='feedback-btn'>Оставить заявку<div class='quick-access-icon'><img src="./img/icons/request.svg"
-								alt="request"></a>
+					<a href="#"><span>Оставить заявку</span>
+						<div class='quick-access-icon'><img src="./img/icons/request.svg" alt="request">
+					</a>
 					</div>
 				</li>
-				<li class="content__header__button"><a href='#'>Статус ремонта<div class='quick-access-icon'> <img
-								src="./img/icons/status.svg" alt="status"></a>
+				<li class="content__header__button"><a href='#'><span>Статус ремонта</span>
+						<div class='quick-access-icon'> <img src="./img/icons/status.svg" alt="status">
+					</a>
 					</div>
 				</li>
 			</ul>
 
 		</header>
-		<nav class='content__nav-menu'>
-			<button class="nav-menu-btn active">Ремонтируемые бренды</button>
-			<button class="nav-menu-btn">Дополнительные услуги</button>
-			<button class="nav-menu-btn">Адреса сервисных центров</button>
-			<button class="nav-menu-btn">Цены на услуги</button>
-			<button class="nav-menu-btn">Специальные цены</button>
-			<button class="nav-menu-btn">Отзывы</button>
-		</nav>
-		<div class='text__wrapper'>
-			<img src="./img/CPS.png" alt="CPS on the wall :)" style='float: right;'>
-			<p>
-				Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать
-				свой
-				ноутбук Dell с официальной гарантией производителя.
-				Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество
-				постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас
-				родным
-				и близким.
-			</p>
-			<p id='readnext-p_1' class=''>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusamus debitis nesciunt, rerum
-				libero
-				necessitatibus eos maiores enim ab et vel voluptates laboriosam ut laborum dicta tempore? Reprehenderit, quidem
-				est.
-			</p>
-			<button id='readnext-btn_1' class='expand-btn'><img src="./img/icons/expand.svg" alt="expand">Читать
-				далее</button>
+		<div class="swiper">
+			<nav class='content__nav-menu swiper-wrapper'>
+				<button class="swiper-slide nav-menu-btn active">Ремонтируемые бренды</button>
+				<button class="swiper-slide nav-menu-btn">Дополнительные услуги</button>
+				<button class="swiper-slide nav-menu-btn">Адреса сервисных центров</button>
+				<button class="swiper-slide nav-menu-btn">Цены на услуги</button>
+				<button class="swiper-slide nav-menu-btn">Специальные цены</button>
+				<button class="swiper-slide nav-menu-btn">Отзывы</button>
+			</nav>
 		</div>
-		<section class='swiper'>
-			<h3>Ремонт различных видов техники</h3>
-			<div class='brand__list swiper-wrapper' id='expanding-section1'>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/lenovo.png" alt="lenovo" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="lenovo" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/samsung.png" alt="samsung" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="samsung" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/apple.png" alt="apple" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="apple" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/viewsonic.png" alt="viewsonic" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="viewsonic" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/bosch.png" alt="bosch" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="bosch" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/hp.png" alt="hp" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="hp" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/acer.png" alt="acer" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="acer" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/sony.svg" alt="sony" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="sony" class='dropdown'></a>
-				</div>
-				<!-- duplicating below -->
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/lenovo.png" alt="lenovo" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="lenovo" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/samsung.png" alt="samsung" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="samsung" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/apple.png" alt="apple" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="apple" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/viewsonic.png" alt="viewsonic" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="viewsonic" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/bosch.png" alt="bosch" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="bosch" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/hp.png" alt="hp" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="hp" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/acer.png" alt="acer" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="acer" class='dropdown'></a>
-				</div>
-				<div class="brand__card swiper-slide">
-					<img src="./img/brands/sony.svg" alt="sony" class='brand'>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="sony" class='dropdown'></a>
-				</div>
+		<div class='text__wrapper'>
+			<div>
+				<p>
+					Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать
+					свой
+					ноутбук Dell с официальной гарантией производителя.
+					<br><br>
+					Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество
+					постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас
+					родным
+					и близким.
+				</p>
+				<p id='readnext-p_1' class=''>
+					<br>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusamus debitis nesciunt, rerum
+					libero
+					necessitatibus eos maiores enim ab et vel voluptates laboriosam ut laborum dicta tempore? Reprehenderit,
+					quidem
+					est.
+				</p>
+				<button id='readnext-btn_1' class='expand-btn'><img src="./img/icons/expand.svg" alt="expand">Читать
+					далее</button>
 			</div>
-			<div class='swiper-pagination'></div>
+			<div><img class='CPS-img' src="./img/CPS.png" alt="CPS on the wall :)"></div>
+		</div>
+		<section>
+			<h3>Ремонт различных видов техники</h3>
+			<div class='swiper'>
+				<div class='brand__list swiper-wrapper' id='expanding-section1'>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/lenovo.png" alt="lenovo" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="lenovo" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/samsung.png" alt="samsung" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="samsung" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/apple.png" alt="apple" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="apple" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/viewsonic.png" alt="viewsonic" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="viewsonic" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/bosch.png" alt="bosch" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="bosch" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/hp.png" alt="hp" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="hp" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/acer.png" alt="acer" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="acer" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/sony.svg" alt="sony" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="sony" class='dropdown'></a>
+					</div>
+					<!-- duplicating below -->
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/lenovo.png" alt="lenovo" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="lenovo" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/samsung.png" alt="samsung" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="samsung" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/apple.png" alt="apple" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="apple" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/viewsonic.png" alt="viewsonic" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="viewsonic" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/bosch.png" alt="bosch" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="bosch" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/hp.png" alt="hp" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="hp" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/acer.png" alt="acer" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="acer" class='dropdown'></a>
+					</div>
+					<div class="brand__card swiper-slide">
+						<img src="./img/brands/sony.svg" alt="sony" class='brand'>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="sony" class='dropdown'></a>
+					</div>
+				</div>
+				<div class='swiper-pagination'></div>
+			</div>
 			<button id='expand-section-btn1' class='expand-btn'><img src="./img/icons/expand.svg" alt="">Показать
 				все</button>
 		</section>
 		<section>
 			<h3>Ремонт различных видов техники</h3>
-			<div class='repair__list' id='expanding-section2'>
-				<div class='repair__card'>
-					<h4>Ремонт ноутбуков</h4>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="laptops" class='dropdown'></a>
+			<div class="swiper">
+				<div class='repair__list swiper-wrapper' id='expanding-section2'>
+					<div class='repair__card swiper-slide'>
+						<h4>Ремонт ноутбуков</h4>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="laptops" class='dropdown'></a>
+					</div>
+					<div class='repair__card swiper-slide'>
+						<h4>Ремонт планшетов</h4>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="tablets" class='dropdown'></a>
+					</div>
+					<div class='repair__card swiper-slide'>
+						<h4>Ремонт ПК</h4>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="PCs" class='dropdown'></a>
+					</div>
+					<div class='repair__card swiper-slide'>
+						<h4>Ремонт мониторов</h4>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="screens" class='dropdown'></a>
+					</div>
+					<!-- duplicating -->
+					<div class='repair__card swiper-slide'>
+						<h4>Ремонт ноутбуков</h4>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="laptops" class='dropdown'></a>
+					</div>
+					<div class='repair__card swiper-slide'>
+						<h4>Ремонт планшетов</h4>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="tablets" class='dropdown'></a>
+					</div>
+					<div class='repair__card swiper-slide'>
+						<h4>Ремонт ПК</h4>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="PCs" class='dropdown'></a>
+					</div>
+					<div class='repair__card swiper-slide'>
+						<h4>Ремонт мониторов</h4>
+						<a href="#"><img src="./img/icons/dropdown.svg" alt="screens" class='dropdown'></a>
+					</div>
 				</div>
-				<div class='repair__card'>
-					<h4>Ремонт планшетов</h4>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="tablets" class='dropdown'></a>
-				</div>
-				<div class='repair__card'>
-					<h4>Ремонт ПК</h4>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="PCs" class='dropdown'></a>
-				</div>
-				<div class='repair__card'>
-					<h4>Ремонт мониторов</h4>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="screens" class='dropdown'></a>
-				</div>
-				<!-- duplicating -->
-				<div class='repair__card'>
-					<h4>Ремонт ноутбуков</h4>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="laptops" class='dropdown'></a>
-				</div>
-				<div class='repair__card'>
-					<h4>Ремонт планшетов</h4>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="tablets" class='dropdown'></a>
-				</div>
-				<div class='repair__card'>
-					<h4>Ремонт ПК</h4>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="PCs" class='dropdown'></a>
-				</div>
-				<div class='repair__card'>
-					<h4>Ремонт мониторов</h4>
-					<a href="#"><img src="./img/icons/dropdown.svg" alt="screens" class='dropdown'></a>
-				</div>
+				<div class='swiper-pagination'></div>
 			</div>
 			<button id='expand-section-btn2' class='expand-btn'><img src="./img/icons/expand.svg" alt="">Показать
 				все</button>
 		</section>
 		<section>
 			<h3>Цена на услуги</h3>
-			<table class='price__table'>
+			<table class='price__table swiper'>
 				<thead>
 					<tr>
 						<th>Ремонтные услуги</th>
@@ -254,39 +285,40 @@
 						<th></th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr>
+				<tbody class='swiper-wrapper'>
+					<tr class='swiper-slide'>
 						<th>Диагностика</th>
 						<th>Бесплатно</th>
 						<th>30 мин</th>
 						<th><button>заказать <img src="./img/icons/dropdown2.svg" alt="order"></button></th>
 					</tr>
-					<tr>
+					<tr class='swiper-slide'>
 						<th>Замена дисплея</th>
 						<th>1 000 ₽</th>
 						<th>30-120 мин</th>
 						<th><button>заказать <img src="./img/icons/dropdown2.svg" alt="order"></button></th>
 
 					</tr>
-					<tr>
+					<tr class='swiper-slide'>
 						<th>Замена полифонического динамика</th>
 						<th>1 000 ₽</th>
 						<th>30-120 мин</th>
 						<th><button>заказать <img src="./img/icons/dropdown2.svg" alt="order"></button></th>
 
 					</tr>
-					<tr>
+					<tr class='swiper-slide'>
 						<th>Тестирование с выдачей технического заключения</th>
 						<th>1 000 ₽</th>
 						<th>30-120 мин</th>
 						<th><button>заказать <img src="./img/icons/dropdown2.svg" alt="order"></button></th>
-					<tr>
+					<tr class='swiper-slide'>
 						<th>Замена программного обеспечения</th>
 						<th>1 000 ₽</th>
 						<th>30-120 мин</th>
 						<th><button>заказать <img src="./img/icons/dropdown2.svg" alt="order"></button></th>
 					</tr>
 				</tbody>
+				<div class='swiper-pagination'></div>
 			</table>
 			<p class='table__info'>Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения
 				коммерческого

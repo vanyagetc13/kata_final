@@ -110,33 +110,69 @@ const closeCall = () => {
   document.body.classList.remove('modalopened')
 }
 
+const closeAllFSModals = () => {
+  closeFeedback()
+  closeCall()
+}
+
 CloseModalBtns.forEach((btn) => {
+  btn.addEventListener('click', closeAllFSModals)
+})
+
+// Open-modals btns
+
+const callBtns = Array.from(document.getElementsByClassName('call-btn'))
+const feedbackBtns = Array.from(document.getElementsByClassName('feedback-btn'))
+
+callBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    closeFeedback()
-    closeCall()
+    ModalCall.classList.add('active')
+    document.body.classList.add('modalopened')
   })
 })
 
-const callBtn = document.getElementById('call-btn')
-const feedbackBtn = document.getElementById('feedback-btn')
-
-callBtn.addEventListener('click', () => {
-  ModalCall.classList.add('active')
-  document.body.classList.add('modalopened')
+feedbackBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    ModalFeedback.classList.add('active')
+    document.body.classList.add('modalopened')
+  })
 })
 
-feedbackBtn.addEventListener('click', () => {
-  ModalFeedback.classList.add('active')
-  document.body.classList.add('modalopened')
-})
 // Swiper
 const createSwiper = () => {
   const swiper = new Swiper('.swiper', {
     pagination: {
-      el: '.swiper-pagination'
-    }
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    slidesPerView: 'auto',
+    spaceBetween: 16
   })
 }
-
+const removeWidthProperty = (item) => {
+  item.style.removeProperty('width')
+}
 const screenWidth = window.innerWidth
-if (screenWidth <= 768) createSwiper()
+const swiperItems = Array.from(document.getElementsByClassName('swiper-slide'))
+if (screenWidth <= 768) {
+  createSwiper()
+
+  // swiperItems.forEach((btn) => removeWidthProperty(btn))
+}
+// burger
+
+const burgerBtn = document.getElementById('burger-btn')
+const navMenu = document.getElementById('nav-menu')
+
+let burgerMenuOpened = false
+
+burgerBtn.addEventListener('click', () => {
+  if (!burgerMenuOpened) {
+    navMenu.classList.add('active')
+    document.body.classList.add('modalopened')
+  } else {
+    navMenu.classList.remove('active')
+    document.body.classList.remove('modalopened')
+  }
+  burgerMenuOpened = !burgerMenuOpened
+})
