@@ -902,6 +902,16 @@ h3 {
     display: none;
   }
 
+  .table__info {
+    width: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .price__table {
     display: block;
     overflow: visible;
