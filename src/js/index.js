@@ -45,6 +45,7 @@ buttons.forEach((btn) => {
 
 const expandedParagraph1 = document.getElementById('readnext-p_1')
 const expandingButton1 = document.getElementById('readnext-btn_1')
+const cpsParagraph = document.getElementsByClassName('cps-paragraph')[0]
 
 let isParagraph1Expanded = false
 
@@ -52,9 +53,11 @@ expandingButton1.addEventListener('click', () => {
   if (isParagraph1Expanded) {
     expandedParagraph1.classList.remove('expanded')
     expandingButton1.classList.remove('expanded')
+    cpsParagraph.classList.remove('active')
   } else {
     expandedParagraph1.classList.add('expanded')
     expandingButton1.classList.add('expanded')
+    cpsParagraph.classList.add('active')
   }
   isParagraph1Expanded = !isParagraph1Expanded
 })
@@ -119,6 +122,12 @@ CloseModalBtns.forEach((btn) => {
   btn.addEventListener('click', closeAllFSModals)
 })
 
+// Закрытие модалок при клике на блюр
+document.addEventListener('click', (e) => {
+  const lastPathEl = e.composedPath()[0]
+  if (lastPathEl.classList.contains('modal')) closeAllFSModals()
+})
+
 // Open-modals btns
 
 const callBtns = Array.from(document.getElementsByClassName('call-btn'))
@@ -163,6 +172,7 @@ if (screenWidth <= 768) {
 
 const burgerBtn = document.getElementById('burger-btn')
 const navMenu = document.getElementById('nav-menu')
+const emptyModal = document.getElementsByClassName('empty__modal')[0]
 
 let burgerMenuOpened = false
 
@@ -170,6 +180,7 @@ burgerBtn.addEventListener('click', () => {
   if (!burgerMenuOpened) {
     navMenu.classList.add('active')
     document.body.classList.add('modalopened')
+    emptyModal.classList.add('active')
   } else {
     navMenu.classList.remove('active')
     document.body.classList.remove('modalopened')

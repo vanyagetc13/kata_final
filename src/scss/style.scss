@@ -62,7 +62,7 @@ h3 {
   }
 }
 
-.content__header__button:hover img {
+.content-header__button:hover img {
   animation: 0.5s forwards linear shaky;
 }
 
@@ -96,6 +96,12 @@ h3 {
   }
 }
 
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
 .logo {
   display: block;
 }
@@ -115,14 +121,11 @@ h3 {
   line-height: 150%;
   letter-spacing: -0.2px;
 
-  & > a {
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
+  & > .link {
     font-weight: 500;
   }
 
-  &.active > a {
+  &.active > .link {
     color: $activeTextColor;
     position: relative;
 
@@ -142,7 +145,7 @@ h3 {
 .nav-menu__list-item + .nav-menu__list-item {
   padding-top: 28px;
 }
-.contacts > a {
+.contacts > .link {
   display: block;
   text-decoration: none;
   color: inherit;
@@ -197,13 +200,13 @@ h3 {
   background-color: $bgColor;
 }
 
-.content__header {
+.content-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.content__header__title {
+.content-header__title {
   font-weight: bold;
   font-size: 1.75em;
   position: relative;
@@ -217,13 +220,13 @@ h3 {
     left: -34px;
   }
 }
-.content__header__buttons {
+.content-header__buttons {
   display: flex;
   gap: 32px;
 }
-.content__header__button {
+.content-header__button {
   display: block;
-  & > a {
+  & > .link {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -234,9 +237,8 @@ h3 {
 }
 
 .content__nav-menu {
-  margin-top: 25px;
   display: flex;
-  gap: 20px 5px;
+  gap: 5px;
   flex-wrap: wrap;
   letter-spacing: -0.2px;
   & > .nav-menu-btn {
@@ -260,7 +262,6 @@ h3 {
 
 .text__wrapper {
   display: flex;
-  min-height: 310px;
   margin-top: 20px;
   row-gap: 16px;
   & .CPS-img {
@@ -321,8 +322,8 @@ h3 {
   }
 }
 
-.brand__list,
-.repair__list {
+.brands-list,
+.repairs-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 16px;
@@ -337,7 +338,7 @@ h3 {
   }
 }
 
-.brand__card {
+.brands-list__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -349,9 +350,9 @@ h3 {
   border: 1px solid #eaeaea;
 }
 
-.brand__card,
-.repair__card {
-  a {
+.brands-list__item,
+.repairs-list__item {
+  .link {
     line-height: 0;
     width: fit-content;
   }
@@ -362,7 +363,7 @@ h3 {
   }
 }
 
-.repair__list {
+.repairs-list {
   max-height: 160px;
 
   &.expanded {
@@ -370,7 +371,7 @@ h3 {
   }
 }
 
-.repair__card {
+.repairs-list__item {
   box-sizing: border-box;
   width: 100%;
   height: 160px;
@@ -381,7 +382,7 @@ h3 {
   padding: 16px;
   border: 1px solid #eaeaea;
 
-  a {
+  .link {
     align-self: flex-end;
   }
 }
@@ -504,7 +505,7 @@ h3 {
       }
     }
 
-    a {
+    .link {
       color: $primaryColor;
       text-decoration: none;
     }
@@ -583,15 +584,21 @@ h3 {
   display: none;
 }
 
-.content__header__contacts {
+.content-header__contacts {
   display: none;
 }
 
 // adaptiveness
 
 @media screen and (max-width: 1439px) {
-  .content__header__contacts {
+  .content-header__contacts {
     display: flex;
+  }
+  .CPS-img {
+    width: 360px;
+  }
+  .content-header__title::before {
+    left: -24px;
   }
   .nav-menu__footer {
     display: none;
@@ -676,8 +683,8 @@ h3 {
     }
   }
 
-  .brand__list,
-  .repair__list {
+  .brands-list,
+  .repairs-list {
     grid-template-columns: repeat(3, 1fr);
   }
   .mobile__contact-quick-acess {
@@ -744,7 +751,7 @@ h3 {
   }
   .nav-menu__list {
     height: fit-content;
-    margin-top: 50px;
+    padding-right: 30px;
   }
   .nav-menu__footer {
     position: fixed;
@@ -752,19 +759,19 @@ h3 {
     z-index: 17;
   }
 
-  .content__header__buttons {
+  .content-header__buttons {
     position: absolute;
     z-index: 1;
     right: 0;
     top: 0;
     padding: 24px;
     gap: 16px;
-    & > .content__header__button > a > span {
+    & > .content-header__button > a > span {
       display: none;
     }
   }
 
-  .content__header__button {
+  .content-header__button {
     &:first-child {
       position: relative;
       &::before {
@@ -780,6 +787,19 @@ h3 {
     }
   }
 
+  #readnext-p_1.expanded {
+    max-height: 145px;
+  }
+
+  .cps-paragraph {
+    max-height: 163px;
+    overflow-y: hidden;
+    &.active {
+      max-height: 560px;
+      transition: max-height 1s ease;
+    }
+  }
+
   .text__wrapper > img {
     height: 260px;
   }
@@ -788,10 +808,15 @@ h3 {
 @media screen and (max-width: 767px) {
   .text__wrapper {
     flex-direction: column;
+
     & .CPS-img {
       width: calc(100% + 32px);
+      margin-right: -16px;
       padding-left: 0;
     }
+  }
+  .content-header__title::before {
+    left: -16px;
   }
   .logo::before {
     right: -16px;
@@ -800,9 +825,9 @@ h3 {
   .mobile__contact-quick-acess {
     display: none;
   }
-  .content__header__button:first-child::before {
-    display: none;
-  }
+  // .content-header__button:first-child::before {
+  //   display: none;
+  // }
   .nav-menu__header {
     gap: 15px;
   }
@@ -857,16 +882,16 @@ h3 {
     margin-top: 5px;
   }
 
-  .brand__list,
-  .repair__list {
+  .brands-list,
+  .repairs-list {
     display: flex;
     flex-direction: row;
     overflow: visible;
     gap: 16px;
   }
 
-  .brand__card,
-  .repair__card {
+  .brands-list__item,
+  .repairs-list__item {
     width: 83%;
   }
 
@@ -1005,5 +1030,12 @@ h3 {
 @media screen and (min-width: 1440px) {
   .mobile__contact-quick-acess {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) and (max-height: 700px) {
+  .nav-menu__list {
+    max-height: calc(100dvh - 275px);
+    overflow-y: scroll;
   }
 }

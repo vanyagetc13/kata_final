@@ -14,6 +14,7 @@
 
 <body>
 	<!-- Modals -->
+	<div class='modal empty__modal'></div>
 	<div class='modal modal__feedback'>
 		<button class='modal__close-btn quick-access-icon'><img src="./img/icons/close.svg" alt="close"></button>
 		<form name='feedback'>
@@ -22,8 +23,9 @@
 			<input type="text" placeholder='Телефон' class='modal__input'>
 			<input type="text" placeholder='Электронная почта' class='modal__input'>
 			<textarea placeholder='Сообщение' class='modal__textarea'></textarea>
-			<p>Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
-				<a href="#">политикой конфиденциальности</a>
+			<p>Нажимая “отправить”, вы даете согласие на <a class='link' href="#">обработку персональных данных</a> и
+				соглашаетесь с нашей
+				<a href="#" class='link'>политикой конфиденциальности</a>
 			</p>
 			<button type='button' class='modal__btn'>отправить <img src="./img/icons/dropdown2.svg" alt="send"
 					class='dropdown'></button>
@@ -34,8 +36,9 @@
 		<form name='call'>
 			<!-- <input type="text" placeholder='Имя' class='modal__input'> -->
 			<input type="text" placeholder='Телефон' class='modal__input'>
-			<p>Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
-				<a href="#">политикой конфиденциальности</a>
+			<p>Нажимая “отправить”, вы даете согласие на <a href="#" class='link'>обработку персональных данных</a> и
+				соглашаетесь с нашей
+				<a href="#" class='link'>политикой конфиденциальности</a>
 			</p>
 			<button type='button' class='modal__btn'>отправить</button>
 		</form>
@@ -48,21 +51,21 @@
 				<span></span>
 			</button>
 			<a href="/" class='logo'><img src="./img/logo.svg" alt="logo" width='95px'></a>
-			<h1 style='display: none;'>CPS website</h1>
+			<!-- <h1 style='display: none;'>CPS website</h1> -->
 			<div class='quick-access-icon search__wrapper'>
 				<img src="./img/icons/search.svg" alt="search" width='17px' style='margin-top: 2px;'>
 			</div>
 		</header>
 		<div class='nav-menu__list__wrapper'>
 			<ul class='nav-menu__list'>
-				<li class="nav-menu__list-item"><a href="#">Ремонт техники</a></li>
-				<li class="nav-menu__list-item active"><a href="#">Услуги и сервисы</a></li>
-				<li class="nav-menu__list-item"><a href="#">Корпоративным клиентам</a></li>
-				<li class="nav-menu__list-item"><a href='#'>Продавцам техники</a></li>
-				<li class="nav-menu__list-item"><a href='#'>Партнерам</a></li>
-				<li class="nav-menu__list-item"><a href='#'>Производителям</a></li>
-				<li class="nav-menu__list-item"><a href='#'>Наши сервисные центры</a></li>
-				<li class="nav-menu__list-item"><a href='#'>Контакты</a></li>
+				<li class="nav-menu__list-item"><a href="#" class='link'>Ремонт техники</a></li>
+				<li class="nav-menu__list-item active"><a href="#" class='link'>Услуги и сервисы</a></li>
+				<li class="nav-menu__list-item"><a href="#" class='link'>Корпоративным клиентам</a></li>
+				<li class="nav-menu__list-item"><a href='#' class='link'>Продавцам техники</a></li>
+				<li class="nav-menu__list-item"><a href='#' class='link'>Партнерам</a></li>
+				<li class="nav-menu__list-item"><a href='#' class='link'>Производителям</a></li>
+				<li class="nav-menu__list-item"><a href='#' class='link'>Наши сервисные центры</a></li>
+				<li class="nav-menu__list-item"><a href='#' class='link'>Контакты</a></li>
 			</ul>
 		</div>
 		<footer class="nav-menu__footer">
@@ -79,8 +82,8 @@
 					</div>
 				</div>
 				<div class='contacts'>
-					<a href="mailto:mail@cps.com">mail@cps.com</a>
-					<a href="tel:+78008908900">8 800 890 8900</a>
+					<a href="mailto:mail@cps.com" class='link'>mail@cps.com</a>
+					<a href="tel:+78008908900" class='link'>8 800 890 8900</a>
 				</div>
 			</div>
 			<div class='language-container'>
@@ -104,16 +107,16 @@
 		</div>
 	</nav>
 	<main class='content'>
-		<header class="content__header">
-			<h2 class='content__header__title'>Услуги и сервисы</h2>
-			<ul class='content__header__buttons'>
-				<li class="content__header__button">
-					<a href="#"><span>Оставить заявку</span>
+		<header class="content-header">
+			<h1 class='content-header__title'>Услуги и сервисы</h1>
+			<ul class='content-header__buttons'>
+				<li class="content-header__button">
+					<a href="#" class='link'><span>Оставить заявку</span>
 						<div class='quick-access-icon'><img src="./img/icons/request.svg" alt="request">
 					</a>
 					</div>
 				</li>
-				<li class="content__header__button"><a href='#'><span>Статус ремонта</span>
+				<li class="content-header__button"><a href='#' class='link'><span>Статус ремонта</span>
 						<div class='quick-access-icon'> <img src="./img/icons/status.svg" alt="status">
 					</a>
 					</div>
@@ -133,7 +136,7 @@
 		</div>
 		<div class='text__wrapper'>
 			<div>
-				<p>
+				<p class='cps-paragraph'>
 					Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать
 					свой
 					ноутбук Dell с официальной гарантией производителя.
@@ -159,73 +162,73 @@
 		<section>
 			<h3>Ремонт различных видов техники</h3>
 			<div class='swiper'>
-				<div class='brand__list swiper-wrapper' id='expanding-section1'>
-					<div class="brand__card swiper-slide">
+				<ul class='brands-list swiper-wrapper' id='expanding-section1'>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/lenovo.png" alt="lenovo" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="lenovo" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="lenovo" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/samsung.png" alt="samsung" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="samsung" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="samsung" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/apple.png" alt="apple" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="apple" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="apple" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/viewsonic.png" alt="viewsonic" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="viewsonic" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="viewsonic" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/bosch.png" alt="bosch" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="bosch" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="bosch" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/hp.png" alt="hp" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="hp" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="hp" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/acer.png" alt="acer" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="acer" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="acer" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/sony.svg" alt="sony" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="sony" class='dropdown'></a>
-					</div>
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="sony" class='dropdown'></a>
+					</li>
 					<!-- duplicating below -->
-					<div class="brand__card swiper-slide">
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/lenovo.png" alt="lenovo" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="lenovo" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="lenovo" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/samsung.png" alt="samsung" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="samsung" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="samsung" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/apple.png" alt="apple" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="apple" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="apple" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/viewsonic.png" alt="viewsonic" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="viewsonic" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="viewsonic" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/bosch.png" alt="bosch" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="bosch" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="bosch" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/hp.png" alt="hp" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="hp" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="hp" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/acer.png" alt="acer" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="acer" class='dropdown'></a>
-					</div>
-					<div class="brand__card swiper-slide">
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="acer" class='dropdown'></a>
+					</li>
+					<li class="brands-list__item swiper-slide">
 						<img src="./img/brands/sony.svg" alt="sony" class='brand'>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="sony" class='dropdown'></a>
-					</div>
-				</div>
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="sony" class='dropdown'></a>
+					</li>
+				</ul>
 				<div class='swiper-pagination'></div>
 			</div>
 			<button id='expand-section-btn1' class='expand-btn'><img src="./img/icons/expand.svg" alt="">Показать
@@ -234,41 +237,41 @@
 		<section>
 			<h3>Ремонт различных видов техники</h3>
 			<div class="swiper">
-				<div class='repair__list swiper-wrapper' id='expanding-section2'>
-					<div class='repair__card swiper-slide'>
+				<ul class='repairs-list swiper-wrapper' id='expanding-section2'>
+					<li class='repairs-list__item swiper-slide'>
 						<h4>Ремонт ноутбуков</h4>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="laptops" class='dropdown'></a>
-					</div>
-					<div class='repair__card swiper-slide'>
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="laptops" class='dropdown'></a>
+					</li>
+					<li class='repairs-list__item swiper-slide'>
 						<h4>Ремонт планшетов</h4>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="tablets" class='dropdown'></a>
-					</div>
-					<div class='repair__card swiper-slide'>
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="tablets" class='dropdown'></a>
+					</li>
+					<li class='repairs-list__item swiper-slide'>
 						<h4>Ремонт ПК</h4>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="PCs" class='dropdown'></a>
-					</div>
-					<div class='repair__card swiper-slide'>
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="PCs" class='dropdown'></a>
+					</li>
+					<li class='repairs-list__item swiper-slide'>
 						<h4>Ремонт мониторов</h4>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="screens" class='dropdown'></a>
-					</div>
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="screens" class='dropdown'></a>
+					</li>
 					<!-- duplicating -->
-					<div class='repair__card swiper-slide'>
+					<li class='repairs-list__item swiper-slide'>
 						<h4>Ремонт ноутбуков</h4>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="laptops" class='dropdown'></a>
-					</div>
-					<div class='repair__card swiper-slide'>
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="laptops" class='dropdown'></a>
+					</li>
+					<li class='repairs-list__item swiper-slide'>
 						<h4>Ремонт планшетов</h4>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="tablets" class='dropdown'></a>
-					</div>
-					<div class='repair__card swiper-slide'>
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="tablets" class='dropdown'></a>
+					</li>
+					<li class='repairs-list__item swiper-slide'>
 						<h4>Ремонт ПК</h4>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="PCs" class='dropdown'></a>
-					</div>
-					<div class='repair__card swiper-slide'>
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="PCs" class='dropdown'></a>
+					</li>
+					<li class='repairs-list__item swiper-slide'>
 						<h4>Ремонт мониторов</h4>
-						<a href="#"><img src="./img/icons/dropdown.svg" alt="screens" class='dropdown'></a>
-					</div>
-				</div>
+						<a href="#" class='link'><img src="./img/icons/dropdown.svg" alt="screens" class='dropdown'></a>
+					</li>
+				</ul>
 				<div class='swiper-pagination'></div>
 			</div>
 			<button id='expand-section-btn2' class='expand-btn'><img src="./img/icons/expand.svg" alt="">Показать
@@ -323,7 +326,7 @@
 			<p class='table__info'>Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения
 				коммерческого
 				предложения на постоянное обслуживание, оставьте заявку.</p>
-			<a href="#" class='table__offer'>Получить коммерческое предложение <img src="./img/icons/dropdown.svg"
+			<a href="#" class='link table__offer'>Получить коммерческое предложение <img src="./img/icons/dropdown.svg"
 					alt="go"></a>
 		</section>
 		<footer class='footer'>
