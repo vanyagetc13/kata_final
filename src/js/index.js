@@ -122,16 +122,10 @@ CloseModalBtns.forEach((btn) => {
   btn.addEventListener('click', closeAllFSModals)
 })
 
-// Закрытие модалок при клике на блюр
-document.addEventListener('click', (e) => {
-  const lastPathEl = e.composedPath()[0]
-  if (lastPathEl.classList.contains('modal')) closeAllFSModals()
-})
-
 // Open-modals btns
 
 const callBtns = Array.from(document.getElementsByClassName('call-btn'))
-const feedbackBtns = Array.from(document.getElementsByClassName('feedback-btn'))
+const chatBtns = Array.from(document.getElementsByClassName('chat-btn'))
 
 callBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -140,7 +134,7 @@ callBtns.forEach((btn) => {
   })
 })
 
-feedbackBtns.forEach((btn) => {
+chatBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
     ModalFeedback.classList.add('active')
     document.body.classList.add('modalopened')
@@ -176,7 +170,7 @@ const emptyModal = document.getElementsByClassName('empty__modal')[0]
 
 let burgerMenuOpened = false
 
-burgerBtn.addEventListener('click', () => {
+const closeBurger = () => {
   if (!burgerMenuOpened) {
     navMenu.classList.add('active')
     document.body.classList.add('modalopened')
@@ -184,6 +178,17 @@ burgerBtn.addEventListener('click', () => {
   } else {
     navMenu.classList.remove('active')
     document.body.classList.remove('modalopened')
+    emptyModal.classList.remove('active')
   }
   burgerMenuOpened = !burgerMenuOpened
+}
+burgerBtn.addEventListener('click', closeBurger)
+
+// Закрытие модалок при клике на блюр
+document.addEventListener('click', (e) => {
+  const lastPathEl = e.composedPath()[0]
+  if (lastPathEl.classList.contains('modal')) {
+    closeAllFSModals()
+    if (lastPathEl.classList.contains('empty__modal')) closeBurger()
+  }
 })
