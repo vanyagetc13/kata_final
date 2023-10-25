@@ -167,28 +167,31 @@ if (screenWidth <= 768) {
 const burgerBtn = document.getElementById('burger-btn')
 const navMenu = document.getElementById('nav-menu')
 const emptyModal = document.getElementsByClassName('empty__modal')[0]
+const headerBtns = document.getElementsByClassName('content-header__buttons')[0]
 
 let burgerMenuOpened = false
 
-const closeBurger = () => {
+const toggleBurger = () => {
   if (!burgerMenuOpened) {
     navMenu.classList.add('active')
     document.body.classList.add('modalopened')
     emptyModal.classList.add('active')
+    headerBtns.classList.add('not-visible')
   } else {
     navMenu.classList.remove('active')
     document.body.classList.remove('modalopened')
     emptyModal.classList.remove('active')
+    headerBtns.classList.remove('not-visible')
   }
   burgerMenuOpened = !burgerMenuOpened
 }
-burgerBtn.addEventListener('click', closeBurger)
+burgerBtn.addEventListener('click', toggleBurger)
 
 // Закрытие модалок при клике на блюр
 document.addEventListener('click', (e) => {
   const lastPathEl = e.composedPath()[0]
   if (lastPathEl.classList.contains('modal')) {
     closeAllFSModals()
-    if (lastPathEl.classList.contains('empty__modal')) closeBurger()
+    if (lastPathEl.classList.contains('empty__modal')) toggleBurger()
   }
 })

@@ -574,6 +574,7 @@ button.quick-access-icon {
   width: fit-content;
   align-self: flex-end;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .modal__input,
@@ -787,13 +788,16 @@ button.quick-access-icon {
 
   .content-header__buttons {
     position: absolute;
-    z-index: 13;
+    z-index: 902;
     right: 0;
     top: 0;
     padding: 24px;
     gap: 16px;
     & > .content-header__button > a > span {
       display: none;
+    }
+    &.not-visible {
+      z-index: 12;
     }
   }
 
@@ -913,7 +917,11 @@ button.quick-access-icon {
     display: flex;
     flex-direction: row;
     overflow: visible;
-    gap: 16px;
+    gap: 0;
+  }
+
+  .content__nav-menu {
+    gap: 0;
   }
 
   .brands-list__item,
@@ -978,7 +986,6 @@ button.quick-access-icon {
     & > tbody {
       display: flex;
       background-color: transparent;
-      gap: 16px;
       height: 100%;
     }
 
