@@ -725,7 +725,11 @@ button.quick-access-icon {
   .brands-list,
   .repairs-list {
     grid-template-columns: repeat(3, 1fr);
+    &.expanded {
+      max-height: 520px;
+    }
   }
+
   .mobile__contact-quick-acess {
     margin-right: 138px;
   }
@@ -918,6 +922,10 @@ button.quick-access-icon {
     flex-direction: row;
     overflow: visible;
     gap: 0;
+
+    &.expanded {
+      max-height: 100px;
+    }
   }
 
   .content__nav-menu {
